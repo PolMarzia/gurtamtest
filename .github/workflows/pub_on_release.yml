@@ -27,10 +27,11 @@ jobs:
           args: Тесты перед публикацией пройдены
 
   build_and_pub:
-      needs: [ prepub_tests ]
+    needs: [ prepub_tests ]
     env:
       LOGIN: ${{ secrets.DOCKER_LOGIN }}
       NAME: ${{ secrets.DOCKER_NAME }}
+    runs-on: [ubuntu-latest]
     steps:
       - name: Login to docker.io
         run: echo ${{ secrets.DOCKER_PWD }} | docker login -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
