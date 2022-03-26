@@ -14,7 +14,7 @@ def validate_post_data(data: dict) -> bool:
 
 @app.route('/', methods=['GET'])
 def hello():
-    return 'Hello balaboba!'
+    return 'Hello lolkek'
 
 @app.route('/api', methods=['GET', 'POST'])
 def api():
