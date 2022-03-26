@@ -25,4 +25,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_GROUP }}
           token: ${{ secrets.TELEGRAM_BOT}}
-          args: Тесты пройдены
+          args: Тесты после коммита пройдены
