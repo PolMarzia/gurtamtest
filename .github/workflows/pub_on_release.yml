@@ -2,7 +2,7 @@ name: Run tests on published event
 on:
   push:
     tags:
-      - 'l*'
+      - 'v*'
 
 jobs:
   prepub_tests:
