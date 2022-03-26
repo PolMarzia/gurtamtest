@@ -25,3 +25,9 @@ jobs:
         run: coverage run tests.py
       - name: Tests report
         run: coverage report
+      - name: "telegram Notification"
+        uses: "appleboy/telegram-action@master"
+        with:
+          to: ${{ secrets.TELEGRAM_GROUP }}
+          token: ${{ secrets.TELEGRAM_BOT}}
+          args: Commit publish ${{ commit.message }}
