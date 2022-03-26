@@ -30,4 +30,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_GROUP }}
           token: ${{ secrets.TELEGRAM_BOT}}
-          args: Commit publish ${{ commit.message }}
+          args: Commit publish ${{ github.event.commits[0].message }}
