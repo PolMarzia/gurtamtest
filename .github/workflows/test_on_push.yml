@@ -25,4 +25,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_GROUP }}
           token: ${{ secrets.TELEGRAM_BOT}}
-          args: Test results ${ coverage report }
+          args: Test results $(coverage report)
